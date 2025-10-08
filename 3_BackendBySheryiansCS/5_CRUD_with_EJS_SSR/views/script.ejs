@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USING EJS file</title>
+    <title>Using EJS file - INDEX page</title>
     <link rel="stylesheet" href="./stylesheets/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -12,10 +12,24 @@
 
 <body>
     <!-- <%=  %>  // It's a EJS -->
-    <!-- <h1>Hello MASQ <%= 9-1 %></h1> -->
-    <div class="w-full h-full bg-zinc-800 p-10 text-white">
-        <form action="">
-            <input class="px-5 py-3 bg-transparent border" type="text" placeholder="name">
+    <h1>Hello MASQ <%= 9-1 %>
+    </h1>
+
+    <div class="w-full h-full bg-zinc-900 p-10 text-white">
+        <nav class="nav bg-zinc-500 mb-5 px-5 max-w-35 rounded-md">
+            <a href="/read">back to Read</a>
+        </nav>
+
+
+        <h1 class="text-3xl tracking-tighter mb-3">Create User</h1>
+        <form action="/create" method="post">
+            <input class="px-5 py-2 border-2 border-zinc-700 outline-none rounded-lg bg-transparent" type="text"
+                name="his_name" placeholder="name">
+            <input class="px-5 py-2 border-2 border-zinc-700 outline-none rounded-lg bg-transparent" type="text"
+                name="his_email" placeholder="email">
+            <input class="px-5 py-2 border-2 border-zinc-700 outline-none rounded-lg bg-transparent" type="text"
+                name="his_image_url" placeholder="image url">
+            <input class="px-5 py-2 bg-blue-500 rounded-lg ml-3 cursor-pointer" type="submit" value="Create User">
         </form>
     </div>
 </body>
